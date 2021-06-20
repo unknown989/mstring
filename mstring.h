@@ -22,7 +22,7 @@ void strdel(char* str,char c){ /* String delete character */
 }
 void stridel(char* str,int index){ /* Delete a index in string */
 		if(index >= strlen(str)){
-				print("Index out of range");
+				printf("Index out of range");
 				exit(1);
 		}else{
 				strcpy(&str[index],&str[index+1]);
