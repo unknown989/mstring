@@ -10,7 +10,7 @@ int strfchr(char*,char);
 char* lower(char*);
 char* upper(char*);
 void strdel(char*,char);
-void stridel(char*,char);
+void stridel(char*,int);
 
 /* Implementations */
 void strdel(char* str,char c){ /* String delete character */
