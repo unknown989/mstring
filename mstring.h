@@ -10,7 +10,8 @@ int strfchr(char*,char);
 char* lower(char*);
 char* upper(char*);
 void strdel(char*,char);
-void stridel(char* str,int index);
+void stridel(char*,char);
+
 /* Implementations */
 void strdel(char* str,char c){ /* String delete character */
 	int index = strfchr(str,c);
@@ -41,13 +42,13 @@ int strfchr(char* str,char c){ /* String find character */
 }
 
 
-/* reverse a string */r){
+char* reverse(char* str){/* reverse a string */	
 	char* tstr = (char*)malloc(strlen(str));
 	int offs = 0;
 	for(int i = strlen(str)-1;i >= 0;i--){
 		tstr[ offs] = str[i];
-		offs++;
-	}
+		offs++;	
+	}	
 	return (char*)tstr;
 }
 
