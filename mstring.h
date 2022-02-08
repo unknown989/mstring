@@ -1,5 +1,5 @@
-#ifndef MSTRING
-#define MSTRING
+#ifndef MSTRING_H
+#define MSTRING_H
 
 #include <string.h>
 #include <stdlib.h>
