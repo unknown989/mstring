@@ -11,8 +11,27 @@ char* lower(char*);
 char* upper(char*);
 void strdel(char*,char);
 void stridel(char*,int);
+int strfind(char* src,char* value);
 
 /* Implementations */
+int strfind(char* src,char* value){ // Find a char* in a char*
+    int length = strlen(value);
+    int i = 0;
+    char tmp[length];
+    int o = -1;
+    while(src[i]){
+        if(src[i] == value[0]){
+
+            memcpy(tmp,&src[i],length);
+            if(strcmp(value,tmp) == 0){
+                o = i;
+                break;
+            }
+        }
+        i++;
+    }
+    return o;
+}
 void strdel(char* str,char c){ /* String delete character */
 	int index = strfchr(str,c);
 	while(index != 0){
